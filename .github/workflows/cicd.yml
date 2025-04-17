@@ -30,7 +30,7 @@ jobs:
         run: trivy fs --format table -o fs-report.json .
 
       - name: Gitleaks code scan
-        run: gitleaks detect source . -r gitleaks-report --format json
+        run: gitleaks detect source . -r gitleaks-report -f json
 
   Test:
     runs-on: self-hosted
